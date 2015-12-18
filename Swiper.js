@@ -4,30 +4,37 @@
  */
 function getSwipe(swipeDestinationControlID)
 {
-  sdc = document.getElementById(swipeDestinationControlID);
-  if (sdc)
+  window.sdc = document.getElementById(swipeDestinationControlID);
+  if (window.sdc)
   {
-    var controlType = sdc.getAttribute('type').toLowerCase();
+    var controlType = window.sdc.getAttribute('type').toLowerCase();
     if (controlType == "text" || controlType == "hidden")
     {
-      sdc.value = "";
-      document.addEventListener('keypress', function(event)
-        {
-          event.preventDefault();
-          if(event.which == 13) // On ENTER submit parent form
-          {
-            document.removeEventListener('keypress');
-            if (sdc.form)
-              sdc.form.submit();
-          }
-          else
-          {
-            sdc.value += String.fromCharCode(event.which);
-          }
-          return false;
-        });
+      window.sdc.value = "";
+      document.addEventListener('keypress', swipeCapture, true);
     }
   }
+}
+
+/**
+ * Event function for capturing swipe data
+ */
+function swipeCapture(event)
+{
+  event.preventDefault();
+  if(event.which == 13) // On ENTER submit parent form
+  {
+    document.removeEventListener('keypress');
+    if (window.sdc.form)
+    {
+      window.sdc.form.submit();
+    }
+  }
+  else
+  {
+    window.sdc.value += String.fromCharCode(event.which);
+  }
+  return false;
 }
 
 /*
@@ -35,7 +42,9 @@ function getSwipe(swipeDestinationControlID)
 */
 function cancelSwipe()
 {
-  if (sdc)
-    sdc.value = "";
-  document.removeEventListener('keypress');
+  if (window.sdc)
+  {
+    window.sdc.value = "";
+  }
+  document.removeEventListener('keypress', swipeCapture, true);
 }
