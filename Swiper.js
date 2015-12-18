@@ -17,7 +17,8 @@ function getSwipe(swipeDestinationControlID)
           if(event.which == 13) // On ENTER submit parent form
           {
             document.removeEventListener('keypress');
-            sdc.form.submit();
+            if (sdc.form)
+              sdc.form.submit();
           }
           else
           {
