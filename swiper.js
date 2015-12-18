@@ -7,7 +7,7 @@ function getSwipe(swipeDestinationControlID)
   sdc = document.getElementById(swipeDestinationControlID);
   if (sdc)
   {
-    var controlType = sdc.getAttribute('type');
+    var controlType = sdc.getAttribute('type').toLowerCase();
     if (controlType == "text" || controlType == "hidden")
     {
       sdc.value = "";
