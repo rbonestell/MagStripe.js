@@ -16,7 +16,7 @@ Swiper.js streams the swiper data to a text control and submits the form after r
 <input type="hidden" id="swipe_data" />
 ```
 
-#### 3. Call `getSwipe()`
+#### 3. Call `getSwipe()` with destination field ID
 ```javascript
 getSwipe('swipe_data');
 ```
