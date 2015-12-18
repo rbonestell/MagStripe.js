@@ -6,7 +6,7 @@ Swiper.js streams the swiper data to a text control and submits the form after r
 
 ### Getting Started
 ##### 1. Include `Swiper.js` in your page
-[Download minified file from releases.](https://github.com/rbonestell/Swiper.js/releases)
+[Download minified file from GitHub releases.](https://github.com/rbonestell/Swiper.js/releases)
 ```html
 <script src="swiper-min.js"></script>
 ```
@@ -16,7 +16,7 @@ Swiper.js streams the swiper data to a text control and submits the form after r
 <input type="hidden" id="swipe_data" />
 ```
 
-##### 3. Call `getSwipe()` with destination field ID
+##### 3. Call `getSwipe()` with the destination field ID
 ```javascript
 getSwipe('swipe_data');
 ```
