@@ -24,7 +24,7 @@ function swipeCapture(event)
   event.preventDefault();
   if(event.which == 13) // On ENTER submit parent form
   {
-    document.removeEventListener('keypress');
+    document.removeEventListener('keypress', swipeCapture, true);
     if (window.sdc.form)
     {
       window.sdc.form.submit();
