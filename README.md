@@ -5,7 +5,8 @@ A small JavaScript library for capturing data from keyboard emulated mag stripe 
 Swiper.js streams the swiper data to a text control and submits the form after receiving the data.
 
 ### Getting Started
-##### 1. Include `swiper.js` in your page
+##### 1. Include `Swiper.js` in your page
+[Download minified file from releases.](https://github.com/rbonestell/Swiper.js/releases)
 ```html
 <script src="swiper-min.js"></script>
 ```
