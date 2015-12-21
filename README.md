@@ -34,4 +34,4 @@ Swiper.js streams the swiper data to a text control and submits the form after r
 5. [Submit a pull request!](https://github.com/rbonestell/Swiper.js/pull/new/master)
 
 
-*Important Note: Your mag stripe reader device must be configured for keyboard emulation, and to terminate data with a return character.*
+*Important Note: Your mag stripe reader device must be configured for keyboard emulation, and to terminate data with a carriage return.*
