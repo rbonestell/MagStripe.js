@@ -18,12 +18,12 @@ MagStripe.js streams the swiper data to a text control and submits the form afte
 
 ##### 3. Call `getSwipe()` with the destination field ID to begin swipe capture
 ```html
-<input type="button" onclick="getSwipe('swipe_data')" value="Swipe" />
+<input type="button" onclick="MagStripe.getSwipe('swipe_data')" value="Swipe" />
 ```
 
 ##### 4. Call `cancelSwipe()` to cancel swipe capture
 ```html
-<input type="button" onclick="cancelSwipe()" value="Cancel" />
+<input type="button" onclick="MagStripe.cancelSwipe()" value="Cancel" />
 ```
 
 ### Contributing
